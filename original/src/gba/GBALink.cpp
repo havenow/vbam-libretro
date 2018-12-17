@@ -965,6 +965,10 @@ u16 StartRFU(u16 value)
 bool InitLink()
 {
 	linkid = 0;
+#ifndef WIN32
+	lanlink.active = true;
+	lanlink.numslaves = 1;
+#endif
 
 #if (defined __WIN32__ || defined _WIN32)
 	/*if((mmf=CreateFileMapping(INVALID_HANDLE_VALUE, NULL, PAGE_READWRITE, 0, sizeof(LINKDATA), LOCAL_LINK_NAME))==NULL){
@@ -983,26 +987,25 @@ bool InitLink()
 		systemMessage(0, N_("Error mapping file"));
 		return false;
 	}*/
-	vbaid = 0;
 #else
-	if((mmf = shm_open("/" LOCAL_LINK_NAME, O_RDWR|O_CREAT|O_EXCL, 0777)) < 0) {
-		vbaid = 1;
-		mmf = shm_open("/" LOCAL_LINK_NAME, O_RDWR, 0);
+	/*if((mmf = shm_open("/" LOCAL_LINK_NAME, O_RDWR|O_CREAT|O_EXCL, 0777)) < 0) {
+	vbaid = 1;
+	mmf = shm_open("/" LOCAL_LINK_NAME, O_RDWR, 0);
 	} else
-		vbaid = 0;
+	vbaid = 0;
 	if(mmf < 0 || ftruncate(mmf, sizeof(LINKDATA)) < 0 ||
-	   !(linkmem = (LINKDATA *)mmap(NULL, sizeof(LINKDATA),
-					PROT_READ|PROT_WRITE, MAP_SHARED,
-					mmf, 0))) {
-		systemMessage(0, N_("Error creating file mapping"));
-		if(mmf) {
-			if(!vbaid)
-				shm_unlink("/" LOCAL_LINK_NAME);
-			close(mmf);
-		}
+	!(linkmem = (LINKDATA *)mmap(NULL, sizeof(LINKDATA),
+	PROT_READ|PROT_WRITE, MAP_SHARED,
+	mmf, 0))) {
+	systemMessage(0, N_("Error creating file mapping"));
+	if(mmf) {
+	if(!vbaid)
+	shm_unlink("/" LOCAL_LINK_NAME);
+	close(mmf);
 	}
+	}*/
 #endif
-
+	vbaid = 0;
 	// get lowest-numbered available machine slot
 	bool firstone = !vbaid;
 	if(firstone) {
@@ -1026,10 +1029,10 @@ bool InitLink()
 			/*UnmapViewOfFile(linkmem);
 			CloseHandle(mmf);*/
 #else
-			munmap(linkmem, sizeof(LINKDATA));
+			/*munmap(linkmem, sizeof(LINKDATA));
 			if(!vbaid)
-				shm_unlink("/" LOCAL_LINK_NAME);
-			close(mmf);
+			shm_unlink("/" LOCAL_LINK_NAME);
+			close(mmf);*/
 #endif
 			systemMessage(0, N_("5 or more GBAs not supported."));
 			return false;
@@ -1056,7 +1059,7 @@ bool InitLink()
 			return false;
 		}*/
 #else
-		if((linksync[i] = sem_open(linkevent,
+		/*if((linksync[i] = sem_open(linkevent,
 					   firstone ? O_CREAT|O_EXCL : 0,
 					   0777, 0)) == SEM_FAILED) {
 			if(firstone)
@@ -1072,7 +1075,7 @@ bool InitLink()
 			}
 			systemMessage(0, N_("Error opening event"));
 			return false;
-		}
+		}*/
 #endif
 	}
 	for(i=0;i<4;i++)
@@ -1133,11 +1136,11 @@ void CloseLink(void){
 			/*ReleaseSemaphore(linksync[i], 1, NULL);
 			CloseHandle(linksync[i]);*/
 #else
-			sem_close(linksync[i]);
+			/*sem_close(linksync[i]);
 			if(!(f & 0xf)) {
-				linkevent[sizeof(linkevent)-2]=(char)i+'1';
-				sem_unlink(linkevent);
-			}
+			linkevent[sizeof(linkevent)-2]=(char)i+'1';
+			sem_unlink(linkevent);
+			}*/
 #endif
 		}
 	}
@@ -1149,10 +1152,10 @@ void CloseLink(void){
 	// (but there are no callers, so why bother?)
 	//regSetDwordValue("LAN", lanlink.active);
 #else
-	if(!(f & 0xf))
-		shm_unlink("/" LOCAL_LINK_NAME);
+	/*if(!(f & 0xf))
+	shm_unlink("/" LOCAL_LINK_NAME);
 	munmap(linkmem, sizeof(LINKDATA));
-	close(mmf);
+	close(mmf);*/
 #endif
 	return;
 }
@@ -1163,11 +1166,11 @@ void CloseLink(void){
 void CleanLocalLink()
 {
 #if !(defined __WIN32__ || defined _WIN32)
-	shm_unlink("/" LOCAL_LINK_NAME);
+	/*shm_unlink("/" LOCAL_LINK_NAME);
 	for(int i = 0; i < 4; i++) {
-		linkevent[sizeof(linkevent) - 2] = '1' + i;
-		sem_unlink(linkevent);
-	}
+	linkevent[sizeof(linkevent) - 2] = '1' + i;
+	sem_unlink(linkevent);
+	}*/
 #endif
 }
 
@@ -1198,8 +1201,13 @@ bool lserver::Init(ServerInfoDisplay *sid){
 	// should probably use GetPublicAddress()
 	sid->ShowServerIP(sf::IPAddress::GetLocalAddress());
 
+#ifdef WIN32
 	lanlink.thread = new sf::Thread(LinkServerThread, sid);
 	lanlink.thread->Launch();
+#else
+	lanlink.thread = new std::thread(LinkServerThread, sid);
+	lanlink.thread->detach();
+#endif
 
 	return true;
 
@@ -1366,8 +1374,13 @@ bool lclient::Init(sf::IPAddress addr, ClientInfoDisplay *cid){
 
 	cid->ConnectStart(addr);
 	lanlink.terminate = false;
+#ifdef WIN32
 	lanlink.thread = new sf::Thread(LinkClientThread, cid);
 	lanlink.thread->Launch();
+#else
+	lanlink.thread = new std::thread (LinkClientThread, cid);
+	lanlink.thread->detach();
+#endif
 	return true;
 }
 

@@ -82,6 +82,7 @@ Socket::Status SocketHelper::GetErrorStatus()
         case ETIMEDOUT :    return Socket::Disconnected;
         case ENETRESET :    return Socket::Disconnected;
         case ENOTCONN :     return Socket::Disconnected;
+		case EISCONN :		return Socket::Done;
         default :           return Socket::Error;
     }
 }

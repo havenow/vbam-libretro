@@ -57,6 +57,9 @@ extern const char *MakeInstanceFilename(const char *Input);
 // Link implementation
 #include <SFML/System.hpp>
 #include <SFML/Network.hpp>
+#ifndef WIN32
+#include <thread>//C11
+#endif
 
 class ServerInfoDisplay
 {
@@ -65,6 +68,27 @@ public:
     virtual void ShowConnect(const int player) = 0;
     virtual void Ping() = 0;
     virtual void Connected() = 0;
+};
+
+class ServerInfoDisplay_Imp : public ServerInfoDisplay
+{
+public:
+	void ShowServerIP(const sf::IPAddress& addr)
+	{
+		printf("ServerInfoDisplay_Imp ShowServerIP: %s\n", addr.ToString().c_str());
+	}
+	void ShowConnect(const int player)
+	{
+		printf("ServerInfoDisplay_Imp ShowConnect -->Player %d connected\n", player);
+	}
+	void Ping()
+	{
+		//printf("ServerInfoDisplay_Imp Ping\n");
+	}
+	void Connected()
+	{
+		printf("ServerInfoDisplay_Imp Connected\n");
+	}
 };
 
 typedef struct {
@@ -111,6 +135,32 @@ public:
     virtual void Connected() = 0;
 };
 
+class ClientInfoDisplay_Imp : public ClientInfoDisplay
+{
+public:
+	void ConnectStart(const sf::IPAddress& addr)
+	{
+		printf("ClientInfoDisplay_Imp ConnectStart: %s\n", addr.ToString().c_str());
+	}
+	void Ping()
+	{
+		//printf("ClientInfoDisplay_Imp Ping\n");
+	}
+	void ShowConnect(const int player, const int togo)
+	{
+		printf("ClientInfoDisplay_Imp ShowConnect: Connected as Player #%d\n", player);
+		if (togo)
+			printf("Waiting for %d players to join", togo);
+		else
+			printf("All players joined.");
+	}
+	void Connected()
+	{
+		printf("ClientInfoDisplay_Imp Connected\n");
+	}
+};
+
+
 class lclient{
 	sf::Selector<sf::SocketTCP> fdset;
 	char inbuffer[256], outbuffer[256];
@@ -135,7 +185,11 @@ typedef struct {
 	sf::SocketTCP tcpsocket;
 	//sf::SocketUDP udpsocket;
 	int numslaves;
+#ifdef WIN32
 	sf::Thread *thread;
+#else
+	std::thread *thread;
+#endif
 	int type;
 	bool server;
 	bool terminate;

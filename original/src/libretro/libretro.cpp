@@ -24,6 +24,11 @@
 #include "../apu/Gb_Apu.h"
 #include "../gba/Globals.h"
 #include "../gba/Cheats.h"
+#include "../gba/GBALink.h"
+
+ServerInfoDisplay_Imp server_imp;
+ClientInfoDisplay_Imp client_imp;
+sf::IPAddress ipAddress = sf::IPAddress("192.168.43.1");
 
 #define RETRO_DEVICE_GBA             RETRO_DEVICE_SUBCLASS(RETRO_DEVICE_JOYPAD, 0)
 #define RETRO_DEVICE_GBA_ALT1        RETRO_DEVICE_SUBCLASS(RETRO_DEVICE_JOYPAD, 1)
@@ -281,6 +286,7 @@ void retro_init(void)
    if(environ_cb(RETRO_ENVIRONMENT_SET_PIXEL_FORMAT, &rgb8888) && log_cb)
       log_cb(RETRO_LOG_INFO, "Frontend supports XRGB8888 - will use that instead of XRGB1555.\n");
 #endif
+	InitLink();
 }
 
 static unsigned serialize_size = 0;
@@ -516,6 +522,9 @@ void retro_deinit(void)
 void retro_reset(void)
 {
    CPUReset();
+   //注意网络的连接放到模拟器开始之前，或者帧与帧之间
+   	ls.Init(&server_imp);
+	//lc.Init(ipAddress, &client_imp);
 }
 
 static const unsigned binds[] = {
@@ -615,6 +624,9 @@ void retro_run(void)
    do{
       CPULoop(TICKS);
    }while(!has_frame);
+   
+   if (lanlink.connected && linkid && lc.numtransfers == 0)
+		lc.CheckConn();
 }
 
 size_t retro_serialize_size(void)
