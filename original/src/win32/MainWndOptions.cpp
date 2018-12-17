@@ -596,7 +596,7 @@ void MainWnd::OnUpdateOptionsEmulatorSynchronize(CCmdUI* pCmdUI)
 
 void MainWnd::OnOptionsEmulatorPausewheninactive()
 {
-  theApp.pauseWhenInactive = !theApp.pauseWhenInactive;
+  theApp.pauseWhenInactive = false;//!theApp.pauseWhenInactive;
 }
 
 void MainWnd::OnUpdateOptionsEmulatorPausewheninactive(CCmdUI* pCmdUI)
@@ -1571,7 +1571,7 @@ void MainWnd::OnUpdateOptionsLinkEnable(CCmdUI* pCmdUI)
 
 void MainWnd::OnOptionsLinkEnable()
 {
-	gba_link_enabled = !gba_link_enabled;
+	gba_link_enabled = true;//!gba_link_enabled;
 }
 
 void MainWnd::OnUpdateOptionsLinkRFU(CCmdUI* pCmdUI)

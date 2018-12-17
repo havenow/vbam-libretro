@@ -1,5 +1,5 @@
 #if (_MSC_VER == 1600 && _M_IX86_FP >= 0 && (_MSC_FULL_VER < 160040219))
-#error The version of Visual Studio 2010 you are using generates SSE2 instructions  when /arch:SSE is specified. Please update to Service Pack 1.
+//#error The version of Visual Studio 2010 you are using generates SSE2 instructions  when /arch:SSE is specified. Please update to Service Pack 1.
 #endif
 
 #ifdef NO_D3D
@@ -1505,8 +1505,8 @@ void VBA::loadSettings()
   else
     gbSerialFunction = NULL;
 
-  pauseWhenInactive = regQueryDwordValue("pauseWhenInactive", 1) ?
-    true : false;
+  pauseWhenInactive = false;//regQueryDwordValue("pauseWhenInactive", 1) ?
+    //true : false;
   captureFormat = regQueryDwordValue("captureFormat", 0);
 
   removeIntros = regQueryDwordValue("removeIntros", false) ? true : false;
@@ -1630,7 +1630,7 @@ void VBA::loadSettings()
   linktimeout = regQueryDwordValue("LinkTimeout", 1000);
 
   rfu_enabled = regQueryDwordValue("RFU", false) ? true : false;
-  gba_link_enabled = regQueryDwordValue("linkEnabled", false) ? true : false;
+  gba_link_enabled = true;//regQueryDwordValue("linkEnabled", false) ? true : false;
   gba_joybus_enabled = regQueryDwordValue("joybusEnabled", false) ? true : false;
   buffer = regQueryStringValue("joybusHostAddr", "");
 
@@ -1638,7 +1638,7 @@ void VBA::loadSettings()
 	  joybusHostAddr = std::string(buffer);
   }
 
-  lanlink.active = regQueryDwordValue("LAN", 0) ? true : false;
+  lanlink.active = true;//regQueryDwordValue("LAN", 0) ? true : false;
 #endif
 
   Sm60FPS::bSaveMoreCPU = regQueryDwordValue("saveMoreCPU", 0);

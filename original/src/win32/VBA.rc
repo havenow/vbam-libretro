@@ -15,7 +15,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// German (Germany) resources
+// 德语(德国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
 LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
@@ -47,12 +47,12 @@ END
 
 #endif    // APSTUDIO_INVOKED
 
-#endif    // German (Germany) resources
+#endif    // 德语(德国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// English (United States) resources
+// 英语(美国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
@@ -141,7 +141,7 @@ BEGIN
     CONTROL         "4",IDC_LINK4P,"Button",BS_AUTORADIOBUTTON,142,16,21,13
     CONTROL         "TCP/IP",IDC_LINKTCP,"Button",BS_AUTORADIOBUTTON | WS_GROUP,54,47,42,14
     CONTROL         "UDP",IDC_LINKUDP,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,121,47,33,14
-    PUSHBUTTON      "Start!",IDC_SERVERSTART,79,89,50,17,WS_DISABLED
+    PUSHBUTTON      "Start!",IDC_SERVERSTART,79,89,50,17
     LTEXT           "Select number of players:",IDC_STATIC,60,7,89,10
     LTEXT           "Select protocol:",IDC_STATIC,78,33,53,11
     CONTROL         "Speed hacks",IDC_SSPEED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,76,70,57,12
@@ -154,7 +154,7 @@ BEGIN
     CONTROL         "TCP/IP",IDC_CLINKTCP,"Button",BS_AUTORADIOBUTTON | WS_GROUP,58,20,39,12
     CONTROL         "UDP",IDC_CLINKUDP,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,118,20,32,12
     EDITTEXT        IDC_SERVERIP,84,39,79,12,ES_AUTOHSCROLL | WS_GROUP
-    PUSHBUTTON      "Connect",IDC_LINKCONNECT,75,81,59,16,WS_DISABLED
+    PUSHBUTTON      "Connect",IDC_LINKCONNECT,75,81,59,16
     LTEXT           "Select protocol:",IDC_STATIC,78,7,53,9
     LTEXT           "Server IP address or hostname:",IDC_STATIC,7,37,62,18
     LTEXT           "Speed hacks:",IDC_STATIC,7,64,47,10
@@ -2340,7 +2340,7 @@ BEGIN
     IDS_CHEATS_ENABLED      "Cheats enabled"
 END
 
-#endif    // English (United States) resources
+#endif    // 英语(美国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

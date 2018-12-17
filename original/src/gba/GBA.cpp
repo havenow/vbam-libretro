@@ -3705,6 +3705,11 @@ u32 joy = 0;
 
 void GBAReadInput(void)
 {
+	// update joystick information
+	if(systemReadJoypads())
+		// read default joystick
+		joy = systemReadJoypad(-1);
+
   P1 = 0x03FF ^ (joy & 0x3FF);
   if(cpuEEPROMSensorEnabled)
     systemUpdateMotionSensor();
@@ -3874,6 +3879,8 @@ void CPULoop(int ticks)
                 lastTime = time;
                 count = 0;
               }
+
+			  GBAReadInput();
 
               u32 ext = (joy >> 10);
               // If no (m) code is enabled, apply the cheats at each LCDline

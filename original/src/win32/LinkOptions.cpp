@@ -515,13 +515,14 @@ public:
 
     void ShowServerIP(const sf::IPAddress& addr)
 	{
-		dlg->m_serveraddress.Format("Server IP address is: %s", addr.ToString());
+		dlg->m_serveraddress.Format("Server IP address is: %s", addr.ToString().c_str());
+		dlg->UpdateData(false);
 	}
 
 	void ShowConnect(const int player)
 	{
 		dlg->m_plconn[0].Format("Player %d connected", player);
-		dlg->UpdateData(false);
+		//dlg->UpdateData(false);
 	}
 
 	void Ping()
@@ -533,8 +534,8 @@ public:
 	{
 		MessageBox(NULL, "All players connected", "Link", MB_OK);
 		dlg->SendMessage(WM_CLOSE, 0, 0);
-		delete dlg;
-		dlg = NULL;
+		//delete dlg;
+		//dlg = NULL;
     }
 
 private:
@@ -576,6 +577,7 @@ BOOL LinkClient::OnInitDialog()
 
 	m_prottype = lanlink.type;
 	m_hacks = lanlink.speed;
+	m_serverip.SetWindowText("192.168.71.28");
 
 	UpdateData(FALSE);
 
@@ -626,8 +628,8 @@ public:
 	{
 		MessageBox(NULL, "Connected.", "Link", MB_OK);
 		dlg->SendMessage(WM_CLOSE, 0, 0);
-		delete dlg;
-		dlg = NULL;
+		//delete dlg;
+		//dlg = NULL;
     }
 
 private:

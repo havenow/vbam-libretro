@@ -967,7 +967,7 @@ bool InitLink()
 	linkid = 0;
 
 #if (defined __WIN32__ || defined _WIN32)
-	if((mmf=CreateFileMapping(INVALID_HANDLE_VALUE, NULL, PAGE_READWRITE, 0, sizeof(LINKDATA), LOCAL_LINK_NAME))==NULL){
+	/*if((mmf=CreateFileMapping(INVALID_HANDLE_VALUE, NULL, PAGE_READWRITE, 0, sizeof(LINKDATA), LOCAL_LINK_NAME))==NULL){
 		systemMessage(0, N_("Error creating file mapping"));
 		return false;
 	}
@@ -982,7 +982,8 @@ bool InitLink()
 		CloseHandle(mmf);
 		systemMessage(0, N_("Error mapping file"));
 		return false;
-	}
+	}*/
+	vbaid = 0;
 #else
 	if((mmf = shm_open("/" LOCAL_LINK_NAME, O_RDWR|O_CREAT|O_EXCL, 0777)) < 0) {
 		vbaid = 1;
@@ -1005,11 +1006,11 @@ bool InitLink()
 	// get lowest-numbered available machine slot
 	bool firstone = !vbaid;
 	if(firstone) {
-		linkmem->linkflags = 1;
+		/*linkmem->linkflags = 1;
 		linkmem->numgbas = 1;
 		linkmem->numtransfers=0;
 		for(i=0;i<4;i++)
-			linkmem->linkdata[i] = 0xffff;
+			linkmem->linkdata[i] = 0xffff;*/
 	} else {
 		// FIXME: this should be done while linkmem is locked
 		// (no xfer in progress, no other vba trying to connect)
@@ -1022,8 +1023,8 @@ bool InitLink()
 			}
 		if(vbaid == 4){
 #if (defined __WIN32__ || defined _WIN32)
-			UnmapViewOfFile(linkmem);
-			CloseHandle(mmf);
+			/*UnmapViewOfFile(linkmem);
+			CloseHandle(mmf);*/
 #else
 			munmap(linkmem, sizeof(LINKDATA));
 			if(!vbaid)
@@ -1042,7 +1043,7 @@ bool InitLink()
 	for(i=0;i<4;i++){
 		linkevent[sizeof(linkevent)-2]=(char)i+'1';
 #if (defined __WIN32__ || defined _WIN32)
-		linksync[i] = firstone ?
+		/*linksync[i] = firstone ?
 			CreateSemaphore(NULL, 0, 4, linkevent) :
 			OpenSemaphore(SEMAPHORE_ALL_ACCESS, false, linkevent);
 		if(linksync[i] == NULL) {
@@ -1053,7 +1054,7 @@ bool InitLink()
 			}
 			systemMessage(0, N_("Error opening event"));
 			return false;
-		}
+		}*/
 #else
 		if((linksync[i] = sem_open(linkevent,
 					   firstone ? O_CREAT|O_EXCL : 0,
@@ -1129,8 +1130,8 @@ void CloseLink(void){
 	for(i=0;i<4;i++){
 		if(linksync[i]!=NULL){
 #if (defined __WIN32__ || defined _WIN32)
-			ReleaseSemaphore(linksync[i], 1, NULL);
-			CloseHandle(linksync[i]);
+			/*ReleaseSemaphore(linksync[i], 1, NULL);
+			CloseHandle(linksync[i]);*/
 #else
 			sem_close(linksync[i]);
 			if(!(f & 0xf)) {
@@ -1141,8 +1142,8 @@ void CloseLink(void){
 		}
 	}
 #if (defined __WIN32__ || defined _WIN32)
-	CloseHandle(mmf);
-	UnmapViewOfFile(linkmem);
+	/*CloseHandle(mmf);
+	UnmapViewOfFile(linkmem);*/
 
 	// FIXME: move to caller
 	// (but there are no callers, so why bother?)
