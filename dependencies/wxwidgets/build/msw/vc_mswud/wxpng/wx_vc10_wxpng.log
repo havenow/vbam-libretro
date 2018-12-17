@@ -1,0 +1,46 @@
+﻿生成启动时间为 2017/2/28 13:34:06。
+     1>项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\wx_vc10_wxpng.vcxproj”在节点 5 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“vc_mswud\wxpng\wxpng.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\src\zlib /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _LIB /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE=1 /D _CRT_NON_CONFORMING_SWPRINTFS=1 /D _SCL_SECURE_NO_WARNINGS=1 /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"vc_mswud\wxpng\\" /Fd"..\..\lib\vc_lib\wxpngd.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\src\png\png.c ..\..\src\png\pngerror.c ..\..\src\png\pngget.c ..\..\src\png\pngmem.c ..\..\src\png\pngpread.c ..\..\src\png\pngread.c ..\..\src\png\pngrio.c ..\..\src\png\pngrtran.c ..\..\src\png\pngrutil.c ..\..\src\png\pngset.c ..\..\src\png\pngtrans.c ..\..\src\png\pngwio.c ..\..\src\png\pngwrite.c ..\..\src\png\pngwtran.c ..\..\src\png\pngwutil.c /MP 
+         png.c
+         pngerror.c
+         pngget.c
+         pngmem.c
+         pngpread.c
+         pngread.c
+         pngrio.c
+         pngrtran.c
+         pngrutil.c
+         pngset.c
+         pngtrans.c
+         pngwio.c
+         pngwrite.c
+         pngwtran.c
+         pngwutil.c
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"..\..\lib\vc_lib\wxpngd.lib" /NOLOGO vc_mswud\wxpng\png.obj
+         vc_mswud\wxpng\pngerror.obj
+         vc_mswud\wxpng\pngget.obj
+         vc_mswud\wxpng\pngmem.obj
+         vc_mswud\wxpng\pngpread.obj
+         vc_mswud\wxpng\pngread.obj
+         vc_mswud\wxpng\pngrio.obj
+         vc_mswud\wxpng\pngrtran.obj
+         vc_mswud\wxpng\pngrutil.obj
+         vc_mswud\wxpng\pngset.obj
+         vc_mswud\wxpng\pngtrans.obj
+         vc_mswud\wxpng\pngwio.obj
+         vc_mswud\wxpng\pngwrite.obj
+         vc_mswud\wxpng\pngwtran.obj
+         vc_mswud\wxpng\pngwutil.obj
+         wx_vc10_wxpng.vcxproj -> F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\..\..\lib\vc_lib\wxpngd.lib
+       FinalizeBuildStatus:
+         正在删除文件“vc_mswud\wxpng\wxpng.unsuccessfulbuild”。
+         正在对“vc_mswud\wxpng\wxpng.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\wx_vc10_wxpng.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.96

@@ -1,0 +1,30 @@
+﻿生成启动时间为 2017/2/28 13:35:05。
+     1>项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\wxrc_vs2010.vcxproj”在节点 7 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\Win32\Debug\wxrc.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       MakeDirsForCl:
+         正在创建目录“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\vc_mswud\wxrc”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\..\..\lib\vc_lib\mswud /I.\..\..\include /I. /Zi /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE=1 /D _CRT_NON_CONFORMING_SWPRINTFS=1 /D _SCL_SECURE_NO_WARNINGS=1 /D __WXMSW__ /D _UNICODE /D _CONSOLE /D wxUSE_GUI=0 /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"vc_mswud\wxrc\\" /Fd"vc_mswud\wxrc.pdb" /Gd /TP /analyze- /errorReport:prompt wxrc.cpp /MP 
+         wxrc.cpp
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\Win32\Debug\wxrc.exe.embed.manifest.res" F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\Win32\Debug\wxrc_manifest.rc 
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\..\..\..\wxrc.exe) 与 Linker 的 OutputFile 属性值(F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\vc_mswud\wxrc.exe)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Link.OutputFile) 中指定的值匹配。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"vc_mswud\wxrc.exe" /INCREMENTAL /NOLOGO /LIBPATH:.\..\..\lib\vc_lib wxbase30ud_xml.lib wxbase30ud.lib wxzlibd.lib wxregexud.lib wxexpatd.lib kernel32.lib user32.lib gdi32.lib comdlg32.lib winspool.lib winmm.lib shell32.lib comctl32.lib ole32.lib oleaut32.lib uuid.lib rpcrt4.lib advapi32.lib wsock32.lib wininet.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\Win32\Debug\wxrc.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"vc_mswud\wxrc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\..\wxrc.lib" /MACHINE:X86 "F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\Win32\Debug\wxrc.exe.embed.manifest.res"
+         vc_mswud\wxrc\wxrc.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\Win32\Debug\wxrc.exe.embed.manifest" /manifest "F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\Win32\Debug\wxrc.exe.intermediate.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\Win32\Debug\wxrc.exe.embed.manifest.res" F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\Win32\Debug\wxrc_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"vc_mswud\wxrc.exe" /INCREMENTAL /NOLOGO /LIBPATH:.\..\..\lib\vc_lib wxbase30ud_xml.lib wxbase30ud.lib wxzlibd.lib wxregexud.lib wxexpatd.lib kernel32.lib user32.lib gdi32.lib comdlg32.lib winspool.lib winmm.lib shell32.lib comctl32.lib ole32.lib oleaut32.lib uuid.lib rpcrt4.lib advapi32.lib wsock32.lib wininet.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\Win32\Debug\wxrc.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"vc_mswud\wxrc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\..\wxrc.lib" /MACHINE:X86 "F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\Win32\Debug\wxrc.exe.embed.manifest.res"
+         vc_mswud\wxrc\wxrc.obj
+         wxrc_vs2010.vcxproj -> F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\..\..\..\wxrc.exe
+       FinalizeBuildStatus:
+         正在删除文件“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\Win32\Debug\wxrc.unsuccessfulbuild”。
+         正在对“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\Win32\Debug\wxrc.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\utils\wxrc\wxrc_vs2010.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.99

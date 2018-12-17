@@ -1,0 +1,108 @@
+﻿生成启动时间为 2017/2/28 13:34:06。
+     1>项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\wx_vc10_wxjpeg.vcxproj”在节点 8 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“vc_mswud\wxjpeg\wxjpeg.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\mswud /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _LIB /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE=1 /D _CRT_NON_CONFORMING_SWPRINTFS=1 /D _SCL_SECURE_NO_WARNINGS=1 /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"vc_mswud\wxjpeg\\" /Fd"..\..\lib\vc_lib\wxjpegd.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\src\jpeg\jcapimin.c ..\..\src\jpeg\jcapistd.c ..\..\src\jpeg\jccoefct.c ..\..\src\jpeg\jccolor.c ..\..\src\jpeg\jcdctmgr.c ..\..\src\jpeg\jchuff.c ..\..\src\jpeg\jcinit.c ..\..\src\jpeg\jcmainct.c ..\..\src\jpeg\jcmarker.c ..\..\src\jpeg\jcmaster.c ..\..\src\jpeg\jcomapi.c ..\..\src\jpeg\jcparam.c ..\..\src\jpeg\jcphuff.c ..\..\src\jpeg\jcprepct.c ..\..\src\jpeg\jcsample.c ..\..\src\jpeg\jctrans.c ..\..\src\jpeg\jdapimin.c ..\..\src\jpeg\jdapistd.c ..\..\src\jpeg\jdatadst.c ..\..\src\jpeg\jdatasrc.c ..\..\src\jpeg\jdcoefct.c ..\..\src\jpeg\jdcolor.c ..\..\src\jpeg\jddctmgr.c ..\..\src\jpeg\jdhuff.c ..\..\src\jpeg\jdinput.c ..\..\src\jpeg\jdmainct.c ..\..\src\jpeg\jdmarker.c ..\..\src\jpeg\jdmaster.c ..\..\src\jpeg\jdmerge.c ..\..\src\jpeg\jdphuff.c ..\..\src\jpeg\jdpostct.c ..\..\src\jpeg\jdsample.c ..\..\src\jpeg\jdtrans.c ..\..\src\jpeg\jerror.c ..\..\src\jpeg\jfdctflt.c ..\..\src\jpeg\jfdctfst.c ..\..\src\jpeg\jfdctint.c ..\..\src\jpeg\jidctflt.c ..\..\src\jpeg\jidctfst.c ..\..\src\jpeg\jidctint.c ..\..\src\jpeg\jidctred.c ..\..\src\jpeg\jmemmgr.c ..\..\src\jpeg\jmemnobs.c ..\..\src\jpeg\jquant1.c ..\..\src\jpeg\jquant2.c ..\..\src\jpeg\jutils.c /MP 
+         jcapimin.c
+         jcapistd.c
+         jccoefct.c
+         jccolor.c
+         jcdctmgr.c
+         jchuff.c
+         jcinit.c
+         jcmainct.c
+         jcmarker.c
+         jcmaster.c
+         jcomapi.c
+         jcparam.c
+         jcphuff.c
+         jcprepct.c
+         jcsample.c
+         jctrans.c
+         jdapimin.c
+         jdapistd.c
+         jdatadst.c
+         jdatasrc.c
+         jdcoefct.c
+         jdcolor.c
+         jddctmgr.c
+         jdhuff.c
+         jdinput.c
+         jdmainct.c
+         jdmarker.c
+         jdmaster.c
+         jdmerge.c
+         jdphuff.c
+         jdpostct.c
+         jdsample.c
+         jdtrans.c
+         jerror.c
+         jfdctflt.c
+         jfdctfst.c
+         jfdctint.c
+         jidctflt.c
+         jidctfst.c
+         jidctint.c
+         jidctred.c
+         jmemmgr.c
+         jmemnobs.c
+         jquant1.c
+         jquant2.c
+         jutils.c
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"..\..\lib\vc_lib\wxjpegd.lib" /NOLOGO vc_mswud\wxjpeg\jcapimin.obj
+         vc_mswud\wxjpeg\jcapistd.obj
+         vc_mswud\wxjpeg\jccoefct.obj
+         vc_mswud\wxjpeg\jccolor.obj
+         vc_mswud\wxjpeg\jcdctmgr.obj
+         vc_mswud\wxjpeg\jchuff.obj
+         vc_mswud\wxjpeg\jcinit.obj
+         vc_mswud\wxjpeg\jcmainct.obj
+         vc_mswud\wxjpeg\jcmarker.obj
+         vc_mswud\wxjpeg\jcmaster.obj
+         vc_mswud\wxjpeg\jcomapi.obj
+         vc_mswud\wxjpeg\jcparam.obj
+         vc_mswud\wxjpeg\jcphuff.obj
+         vc_mswud\wxjpeg\jcprepct.obj
+         vc_mswud\wxjpeg\jcsample.obj
+         vc_mswud\wxjpeg\jctrans.obj
+         vc_mswud\wxjpeg\jdapimin.obj
+         vc_mswud\wxjpeg\jdapistd.obj
+         vc_mswud\wxjpeg\jdatadst.obj
+         vc_mswud\wxjpeg\jdatasrc.obj
+         vc_mswud\wxjpeg\jdcoefct.obj
+         vc_mswud\wxjpeg\jdcolor.obj
+         vc_mswud\wxjpeg\jddctmgr.obj
+         vc_mswud\wxjpeg\jdhuff.obj
+         vc_mswud\wxjpeg\jdinput.obj
+         vc_mswud\wxjpeg\jdmainct.obj
+         vc_mswud\wxjpeg\jdmarker.obj
+         vc_mswud\wxjpeg\jdmaster.obj
+         vc_mswud\wxjpeg\jdmerge.obj
+         vc_mswud\wxjpeg\jdphuff.obj
+         vc_mswud\wxjpeg\jdpostct.obj
+         vc_mswud\wxjpeg\jdsample.obj
+         vc_mswud\wxjpeg\jdtrans.obj
+         vc_mswud\wxjpeg\jerror.obj
+         vc_mswud\wxjpeg\jfdctflt.obj
+         vc_mswud\wxjpeg\jfdctfst.obj
+         vc_mswud\wxjpeg\jfdctint.obj
+         vc_mswud\wxjpeg\jidctflt.obj
+         vc_mswud\wxjpeg\jidctfst.obj
+         vc_mswud\wxjpeg\jidctint.obj
+         vc_mswud\wxjpeg\jidctred.obj
+         vc_mswud\wxjpeg\jmemmgr.obj
+         vc_mswud\wxjpeg\jmemnobs.obj
+         vc_mswud\wxjpeg\jquant1.obj
+         vc_mswud\wxjpeg\jquant2.obj
+         vc_mswud\wxjpeg\jutils.obj
+         wx_vc10_wxjpeg.vcxproj -> F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\..\..\lib\vc_lib\wxjpegd.lib
+       FinalizeBuildStatus:
+         正在删除文件“vc_mswud\wxjpeg\wxjpeg.unsuccessfulbuild”。
+         正在对“vc_mswud\wxjpeg\wxjpeg.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\wx_vc10_wxjpeg.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.19

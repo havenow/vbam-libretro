@@ -1,0 +1,76 @@
+﻿生成启动时间为 2017/2/28 13:34:11。
+     1>项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\wx_vc10_html.vcxproj”在节点 3 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“vc_mswud\html\html.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       CustomBuild:
+         Creating ..\..\lib\vc_lib\mswud\wx\setup.h
+         已复制         1 个文件。
+         Creating ..\..\lib\vc_lib\mswud\wx\msw\rcdefs.h
+         genrcdefs.h
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\mswud /I..\..\include /I..\..\src\tiff\libtiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _LIB /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE=1 /D _CRT_NON_CONFORMING_SWPRINTFS=1 /D _SCL_SECURE_NO_WARNINGS=1 /D __WXMSW__ /D _UNICODE /D WXBUILDING /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc"wx/wxprec.h" /Fp"vc_mswud\wxprec_htmllib.pch" /Fo"vc_mswud\html\\" /Fd"..\..\lib\vc_lib\wxmsw30ud_html.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\common\dummy.cpp /MP 
+         dummy.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\mswud /I..\..\include /I..\..\src\tiff\libtiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _LIB /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE=1 /D _CRT_NON_CONFORMING_SWPRINTFS=1 /D _SCL_SECURE_NO_WARNINGS=1 /D __WXMSW__ /D _UNICODE /D WXBUILDING /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yu"wx/wxprec.h" /Fp"vc_mswud\wxprec_htmllib.pch" /Fo"vc_mswud\html\\" /Fd"..\..\lib\vc_lib\wxmsw30ud_html.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\msw\helpbest.cpp ..\..\src\generic\htmllbox.cpp ..\..\src\html\helpctrl.cpp ..\..\src\html\helpdata.cpp ..\..\src\html\helpdlg.cpp ..\..\src\html\helpfrm.cpp ..\..\src\html\helpwnd.cpp ..\..\src\html\htmlcell.cpp ..\..\src\html\htmlfilt.cpp ..\..\src\html\htmlpars.cpp ..\..\src\html\htmltag.cpp ..\..\src\html\htmlwin.cpp ..\..\src\html\htmprint.cpp ..\..\src\html\m_dflist.cpp ..\..\src\html\m_fonts.cpp ..\..\src\html\m_hline.cpp ..\..\src\html\m_image.cpp ..\..\src\html\m_layout.cpp ..\..\src\html\m_links.cpp ..\..\src\html\m_list.cpp ..\..\src\html\m_pre.cpp ..\..\src\html\m_span.cpp ..\..\src\html\m_style.cpp ..\..\src\html\m_tables.cpp ..\..\src\html\styleparams.cpp ..\..\src\html\winpars.cpp /MP 
+         helpbest.cpp
+         htmllbox.cpp
+         helpctrl.cpp
+         helpdata.cpp
+         helpdlg.cpp
+         helpfrm.cpp
+         helpwnd.cpp
+         htmlcell.cpp
+         htmlfilt.cpp
+         htmlpars.cpp
+         htmltag.cpp
+         htmlwin.cpp
+         htmprint.cpp
+         m_dflist.cpp
+         m_fonts.cpp
+         m_hline.cpp
+         m_image.cpp
+         m_layout.cpp
+         m_links.cpp
+         m_list.cpp
+         m_pre.cpp
+         m_span.cpp
+         m_style.cpp
+         m_tables.cpp
+         styleparams.cpp
+         winpars.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"..\..\lib\vc_lib\wxmsw30ud_html.lib" /NOLOGO vc_mswud\html\dummy.obj
+         vc_mswud\html\helpbest.obj
+         vc_mswud\html\htmllbox.obj
+         vc_mswud\html\helpctrl.obj
+         vc_mswud\html\helpdata.obj
+         vc_mswud\html\helpdlg.obj
+         vc_mswud\html\helpfrm.obj
+         vc_mswud\html\helpwnd.obj
+         vc_mswud\html\htmlcell.obj
+         vc_mswud\html\htmlfilt.obj
+         vc_mswud\html\htmlpars.obj
+         vc_mswud\html\htmltag.obj
+         vc_mswud\html\htmlwin.obj
+         vc_mswud\html\htmprint.obj
+         vc_mswud\html\m_dflist.obj
+         vc_mswud\html\m_fonts.obj
+         vc_mswud\html\m_hline.obj
+         vc_mswud\html\m_image.obj
+         vc_mswud\html\m_layout.obj
+         vc_mswud\html\m_links.obj
+         vc_mswud\html\m_list.obj
+         vc_mswud\html\m_pre.obj
+         vc_mswud\html\m_span.obj
+         vc_mswud\html\m_style.obj
+         vc_mswud\html\m_tables.obj
+         vc_mswud\html\styleparams.obj
+         vc_mswud\html\winpars.obj
+         wx_vc10_html.vcxproj -> F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\..\..\lib\vc_lib\wxmsw30ud_html.lib
+       FinalizeBuildStatus:
+         正在删除文件“vc_mswud\html\html.unsuccessfulbuild”。
+         正在对“vc_mswud\html\html.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\wx_vc10_html.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:12.48

@@ -1,0 +1,46 @@
+﻿生成启动时间为 2017/2/28 13:34:06。
+     1>项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\wx_vc10_wxzlib.vcxproj”在节点 5 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“vc_mswud\wxzlib\wxzlib.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _LIB /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE=1 /D _CRT_NON_CONFORMING_SWPRINTFS=1 /D _SCL_SECURE_NO_WARNINGS=1 /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_WARNINGS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"vc_mswud\wxzlib\\" /Fd"..\..\lib\vc_lib\wxzlibd.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\src\zlib\adler32.c ..\..\src\zlib\compress.c ..\..\src\zlib\crc32.c ..\..\src\zlib\deflate.c ..\..\src\zlib\gzclose.c ..\..\src\zlib\gzlib.c ..\..\src\zlib\gzread.c ..\..\src\zlib\gzwrite.c ..\..\src\zlib\infback.c ..\..\src\zlib\inffast.c ..\..\src\zlib\inflate.c ..\..\src\zlib\inftrees.c ..\..\src\zlib\trees.c ..\..\src\zlib\uncompr.c ..\..\src\zlib\zutil.c /MP 
+         adler32.c
+         compress.c
+         crc32.c
+         deflate.c
+         gzclose.c
+         gzlib.c
+         gzread.c
+         gzwrite.c
+         infback.c
+         inffast.c
+         inflate.c
+         inftrees.c
+         trees.c
+         uncompr.c
+         zutil.c
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"..\..\lib\vc_lib\wxzlibd.lib" /NOLOGO vc_mswud\wxzlib\adler32.obj
+         vc_mswud\wxzlib\compress.obj
+         vc_mswud\wxzlib\crc32.obj
+         vc_mswud\wxzlib\deflate.obj
+         vc_mswud\wxzlib\gzclose.obj
+         vc_mswud\wxzlib\gzlib.obj
+         vc_mswud\wxzlib\gzread.obj
+         vc_mswud\wxzlib\gzwrite.obj
+         vc_mswud\wxzlib\infback.obj
+         vc_mswud\wxzlib\inffast.obj
+         vc_mswud\wxzlib\inflate.obj
+         vc_mswud\wxzlib\inftrees.obj
+         vc_mswud\wxzlib\trees.obj
+         vc_mswud\wxzlib\uncompr.obj
+         vc_mswud\wxzlib\zutil.obj
+         wx_vc10_wxzlib.vcxproj -> F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\..\..\lib\vc_lib\wxzlibd.lib
+       FinalizeBuildStatus:
+         正在删除文件“vc_mswud\wxzlib\wxzlib.unsuccessfulbuild”。
+         正在对“vc_mswud\wxzlib\wxzlib.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\wx_vc10_wxzlib.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.90

@@ -1,0 +1,28 @@
+﻿生成启动时间为 2017/2/28 13:34:12。
+     1>项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\wx_vc10_gl.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“vc_mswud\gl\gl.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       CustomBuild:
+         Creating ..\..\lib\vc_lib\mswud\wx\setup.h
+         已复制         1 个文件。
+         Creating ..\..\lib\vc_lib\mswud\wx\msw\rcdefs.h
+         genrcdefs.h
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\mswud /I..\..\include /I..\..\src\tiff\libtiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _LIB /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE=1 /D _CRT_NON_CONFORMING_SWPRINTFS=1 /D _SCL_SECURE_NO_WARNINGS=1 /D __WXMSW__ /D _UNICODE /D WXBUILDING /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc"wx/wxprec.h" /Fp"vc_mswud\wxprec_gllib.pch" /Fo"vc_mswud\gl\\" /Fd"..\..\lib\vc_lib\wxmsw30ud_gl.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\common\dummy.cpp /MP 
+         dummy.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\mswud /I..\..\include /I..\..\src\tiff\libtiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _LIB /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE=1 /D _CRT_NON_CONFORMING_SWPRINTFS=1 /D _SCL_SECURE_NO_WARNINGS=1 /D __WXMSW__ /D _UNICODE /D WXBUILDING /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yu"wx/wxprec.h" /Fp"vc_mswud\wxprec_gllib.pch" /Fo"vc_mswud\gl\\" /Fd"..\..\lib\vc_lib\wxmsw30ud_gl.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\common\glcmn.cpp ..\..\src\msw\glcanvas.cpp /MP 
+         glcmn.cpp
+         glcanvas.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"..\..\lib\vc_lib\wxmsw30ud_gl.lib" /NOLOGO vc_mswud\gl\dummy.obj
+         vc_mswud\gl\glcmn.obj
+         vc_mswud\gl\glcanvas.obj
+         wx_vc10_gl.vcxproj -> F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\..\..\lib\vc_lib\wxmsw30ud_gl.lib
+       FinalizeBuildStatus:
+         正在删除文件“vc_mswud\gl\gl.unsuccessfulbuild”。
+         正在对“vc_mswud\gl\gl.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\wx_vc10_gl.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:09.74

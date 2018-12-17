@@ -1,0 +1,48 @@
+﻿生成启动时间为 2017/2/28 13:34:06。
+     1>项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\wx_vc10_net.vcxproj”在节点 6 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“vc_mswud\net\net.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       CustomBuild:
+         Creating ..\..\lib\vc_lib\mswud\wx\setup.h
+         已复制         1 个文件。
+         Creating ..\..\lib\vc_lib\mswud\wx\msw\rcdefs.h
+         genrcdefs.h
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\mswud /I..\..\include /I..\..\src\tiff\libtiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _LIB /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE=1 /D _CRT_NON_CONFORMING_SWPRINTFS=1 /D _SCL_SECURE_NO_WARNINGS=1 /D __WXMSW__ /D _UNICODE /D WXBUILDING /D wxUSE_GUI=0 /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc"wx/wxprec.h" /Fp"vc_mswud\wxprec_netlib.pch" /Fo"vc_mswud\net\\" /Fd"..\..\lib\vc_lib\wxbase30ud_net.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\common\dummy.cpp /MP 
+         dummy.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\mswud /I..\..\include /I..\..\src\tiff\libtiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _LIB /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE=1 /D _CRT_NON_CONFORMING_SWPRINTFS=1 /D _SCL_SECURE_NO_WARNINGS=1 /D __WXMSW__ /D _UNICODE /D WXBUILDING /D wxUSE_GUI=0 /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yu"wx/wxprec.h" /Fp"vc_mswud\wxprec_netlib.pch" /Fo"vc_mswud\net\\" /Fd"..\..\lib\vc_lib\wxbase30ud_net.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\common\fs_inet.cpp ..\..\src\common\ftp.cpp ..\..\src\common\http.cpp ..\..\src\common\protocol.cpp ..\..\src\common\sckaddr.cpp ..\..\src\common\sckfile.cpp ..\..\src\common\sckipc.cpp ..\..\src\common\sckstrm.cpp ..\..\src\common\socket.cpp ..\..\src\common\url.cpp ..\..\src\msw\sockmsw.cpp ..\..\src\msw\urlmsw.cpp /MP 
+         fs_inet.cpp
+         ftp.cpp
+         http.cpp
+         protocol.cpp
+         sckaddr.cpp
+         sckfile.cpp
+         sckipc.cpp
+         sckstrm.cpp
+         socket.cpp
+         url.cpp
+         sockmsw.cpp
+         urlmsw.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"..\..\lib\vc_lib\wxbase30ud_net.lib" /NOLOGO vc_mswud\net\dummy.obj
+         vc_mswud\net\fs_inet.obj
+         vc_mswud\net\ftp.obj
+         vc_mswud\net\http.obj
+         vc_mswud\net\protocol.obj
+         vc_mswud\net\sckaddr.obj
+         vc_mswud\net\sckfile.obj
+         vc_mswud\net\sckipc.obj
+         vc_mswud\net\sckstrm.obj
+         vc_mswud\net\socket.obj
+         vc_mswud\net\url.obj
+         vc_mswud\net\sockmsw.obj
+         vc_mswud\net\urlmsw.obj
+         wx_vc10_net.vcxproj -> F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\..\..\lib\vc_lib\wxbase30ud_net.lib
+       FinalizeBuildStatus:
+         正在删除文件“vc_mswud\net\net.unsuccessfulbuild”。
+         正在对“vc_mswud\net\net.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\gba\gba-v2.0.0\visualboyadvance-m\dependencies\wxwidgets\build\msw\wx_vc10_net.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:12.34
